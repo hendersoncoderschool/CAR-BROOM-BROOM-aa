@@ -22,13 +22,18 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(transform.forward  * speed * Time.deltaTime);
         }
          if(Input.GetKey("s")){
-            transform.Translate(Vector3.forward * -speed * 0.5f * Time.deltaTime);
+            rb.AddForce(transform.forward * -speed * 0.5f * Time.deltaTime);
         }
          if(Input.GetKey("a")){
-            transform.Rotate(Vector3.up, -speed * Time.deltaTime);
+            transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
         }
         if(Input.GetKey("d")){
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
+        }
+
+        if(rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
     }
