@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 85d66fee4a4b95047a015b413fba237e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.07126116, g: 0.08501283, b: 0.10922807, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -260,6 +260,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!1 &432727215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 45f08cefc8df34c4eb8e22b68b05a765, type: 3}
+  m_PrefabInstance: {fileID: 201602815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &432727219
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432727215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 45f08cefc8df34c4eb8e22b68b05a765, type: 3}
 --- !u!1001 &446337662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,7 +496,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100000
   field of view: 90.21989
   orthographic: 0
   orthographic size: 5
@@ -540,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e906258fa207a1e438cecd6fe395f907, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19731
+      value: 19591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e906258fa207a1e438cecd6fe395f907, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,25 +599,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e906258fa207a1e438cecd6fe395f907, type: 3}
---- !u!1 &1138722477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 45f08cefc8df34c4eb8e22b68b05a765, type: 3}
-  m_PrefabInstance: {fileID: 201602815}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1138722479
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138722477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1287735049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2c7c5144384d454992d71a39b871492, type: 3}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50000
   turnSpeed: 1000
-  maxSpeed: 500
+  maxSpeed: 10000
 --- !u!65 &1365534198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!1 &1553701244
 GameObject:
